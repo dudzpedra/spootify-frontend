@@ -1,7 +1,7 @@
 import SpotifyButton from "../ui/SpotifyButton";
 import "./styles.sass";
 
-const LOGIN_URI = process.env.NODE_ENV !== 'production' ? 'http://localhost:8888/login' : 'https://react-spootify.herokuapp.com/login'
+const LOGIN_URI = process.env.NODE_ENV !== 'production' ? 'http://localhost:8888/login' : 'https://spootify-fullstack.herokuapp.com/login'
 
 const Login = () => {
   return (
