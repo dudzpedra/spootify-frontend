@@ -1,4 +1,5 @@
-import { TextField, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
+import { InputUnstyled } from "@mui/base";
 import SpotifyButton from "../ui/SpotifyButton";
 import emailjs from "emailjs-com";
 import "./styles.sass";
@@ -14,17 +15,13 @@ const ContactForm = () => {
   const send = async (e) => {
     e.preventDefault();
     try {
-      if (name.value !== "" && email.value !== "") {
-        await emailjs.sendForm(
-          "service_dy0so26",
-          "template_jgiwoyg",
-          form.current,
-          "O2PFAojLhQYTGSaZH"
-        );
-        setFormSent(true);
-      } else {
-        alert("Name and email fields are required!");
-      }
+      await emailjs.sendForm(
+        "service_dy0so26",
+        "template_jgiwoyg",
+        form.current,
+        "O2PFAojLhQYTGSaZH"
+      );
+      setFormSent(true);
     } catch (e) {
       console.error(e);
     }
@@ -39,17 +36,17 @@ const ContactForm = () => {
           <Typography>
             First time here? Fill out the fields and hit the SEND button!
           </Typography>
-          <TextField
-            variant="filled"
-            id="name"
+          <InputUnstyled
+            placeholder="Enter your name"
+            className="name"
             name="name"
             label="Name"
             required
             {...name}
           />
-          <TextField
-            variant="filled"
-            id="email"
+          <InputUnstyled
+            placeholder="Enter your email"
+            className="email"
             name="email"
             type="email"
             label="Email"
