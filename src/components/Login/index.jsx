@@ -1,12 +1,18 @@
+import { Typography } from "@mui/material";
+import ContactForm from "../ContactForm";
 import SpotifyButton from "../ui/SpotifyButton";
 import "./styles.sass";
 
-const LOGIN_URI = process.env.NODE_ENV !== 'production' ? 'http://localhost:8888/login' : 'https://spootify-fullstack.herokuapp.com/login'
+const LOGIN_URI =
+  process.env.NODE_ENV !== "production"
+    ? "http://localhost:8888/login"
+    : "https://spootify-fullstack.herokuapp.com/login";
 
 const Login = () => {
   return (
     <div className="login-container">
-      <h1>React Spotify App</h1>
+      <Typography variant="h2">React Spotify App</Typography>
+      <ContactForm />
       <SpotifyButton>
         <a href={LOGIN_URI}>Login to Spotify</a>
       </SpotifyButton>
