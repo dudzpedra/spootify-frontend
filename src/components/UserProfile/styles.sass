@@ -4,11 +4,24 @@
 
   .user-profile-area
     display: flex
+    align-items: center
     width: 80%
     margin: 0 auto
 
     img
       border-radius: 100%
+      width: 250px
+      height: 250px
 
     .user-profile-info
       padding-left: 2rem
+
+@media (max-width: 375px)
+  .user-profile-container
+    .user-profile-area
+      img
+        width: 50%
+        height: 50%
+      .user-profile-info
+        font-size: 0.55em
+        padding-left: 0.5rem
