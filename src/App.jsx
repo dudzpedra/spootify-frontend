@@ -5,6 +5,7 @@ import NewReleases from "./components/NewReleases";
 import FeaturedPlaylists from "./components/FeaturedPlaylists";
 import UserProfile from "./components/UserProfile";
 import Login from "./components/Login";
+import Categories from "./components/Categories";
 
 function App() {
   const [token, setToken] = useState(null);
@@ -22,6 +23,7 @@ function App() {
           <UserProfile />
           <NewReleases amount={4} />
           <FeaturedPlaylists amount={4} />
+          <Categories amount={4} />
         </>
       )}
     </div>

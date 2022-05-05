@@ -8,6 +8,7 @@ import App from "../App";
 import NewReleases from "../components/NewReleases";
 import FeaturedPlaylists from "../components/FeaturedPlaylists";
 import { useEffect } from "react";
+import Categories from "../components/Categories";
 
 const AppRoutes = () => {
   function ScrollToTop() {
@@ -26,6 +27,7 @@ const AppRoutes = () => {
         <Route path="/" element={<App />} />
         <Route path="/new-releases" element={<NewReleases />} />
         <Route path="/featured-playlists" element={<FeaturedPlaylists />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
     </Router>
   );

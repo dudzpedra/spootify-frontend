@@ -1,11 +1,8 @@
 .new-releases-container
   display: flex
   flex-direction: column
-  padding-top: 1rem
-  width: 80%
+  width: 90%
   margin: 0 auto
-  background: #000
-  color: #fff
 
   .new-releases-header
     display: flex
@@ -13,7 +10,14 @@
     align-items: center
     justify-content: space-between
     margin: 1rem 0
+    width: 98.5%
 
   .new-releases-grid
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(20%, 25%))
+
+    .new-releases-item
+      width: 95%
+
+      img
+        width: 100%

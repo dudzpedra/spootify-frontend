@@ -26,9 +26,9 @@ const NewReleases = ({ amount }) => {
       <div className="new-releases-grid">
         {data &&
           data.albums.items.slice(0, amount).map((item) => (
-            <div key={item.id}>
+            <div key={item.id} className='new-releases-item'>
               <img src={item.images[1].url} alt="" />
-              <p>{item.release_date}</p>
+              {!amount && <p>{item.release_date}</p>}
               <p>
                 {item.artists[0].name} - {item.name}
               </p>

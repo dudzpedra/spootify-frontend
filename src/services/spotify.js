@@ -64,8 +64,8 @@ const refreshToken = async () => {
       console.error('No refresh token available')
       logout()
     }
-
-    const { data } = await axios.get(`/refresh_token?refresh_token=${LOCALSTORAGE_VALUES.refreshToken}`)
+    //TODO remove http://localhost:8888 when in production mode
+    const { data } = await axios.get(`${process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8888'}/refresh_token?refresh_token=${LOCALSTORAGE_VALUES.refreshToken}`)
 
     window.localStorage.setItem(LOCALSTORAGE_KEYS.accessToken, data.access_token)
     window.localStorage.setItem(LOCALSTORAGE_KEYS.timestamp, Date.now())
