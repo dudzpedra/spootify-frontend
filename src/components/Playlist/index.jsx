@@ -31,7 +31,7 @@ const Playlist = () => {
               <Box key={t.track.id} className="playlist-tracks-item">
                 <Box className="track-info">
                   <h4>{index + 1}</h4>
-                  <img src={t.track.album.images[2].url} alt="" />
+                  <img src={t.track.album ? t.track.album.images[2].url : ''} alt="" />
                   <Box className="track-artist-title">
                     <h4>{t.track.name}</h4>
                     <h5>{t.track.artists[0].name}</h5>
