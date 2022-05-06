@@ -22,7 +22,7 @@ const LoginModal = () => {
       >
         <Box className='modal-container'>
           <Button onClick={handleClose} className='modal-close-btn'>
-            <CloseIcon />
+            <CloseIcon color='action' />
           </Button>
           <ContactForm />
         </Box>
