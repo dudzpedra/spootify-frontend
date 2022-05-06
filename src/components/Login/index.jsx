@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import ContactForm from "../ContactForm";
+import LoginModal from "../ui/LoginModal";
 import SpotifyButton from "../ui/SpotifyButton";
 import "./styles.sass";
 
@@ -12,7 +12,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <Typography variant="h2">React Spotify App</Typography>
-      <ContactForm />
+      <LoginModal />
       <SpotifyButton>
         <a href={LOGIN_URI}>Login to Spotify</a>
       </SpotifyButton>

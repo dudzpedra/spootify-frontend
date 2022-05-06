@@ -33,8 +33,11 @@ const ContactForm = () => {
         <p>Request submitted succesfully. Please wait for confirmation.</p>
       ) : (
         <form ref={form} className="contact-form-container" onSubmit={send}>
-          <Typography>
-            First time here? Fill out the fields and hit the SEND button!
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            First time here?
+          </Typography>
+          <Typography id="modal-modal-description">
+            Fill out the fields and hit the SEND button!
           </Typography>
           <InputUnstyled
             placeholder="Enter your name"
