@@ -24,12 +24,8 @@ const FeaturedPlaylists = ({ amount }) => {
       <div className="featured-grid">
         {data &&
           data.playlists.items.slice(0, amount).map((item) => (
-            <div key={item.id} className='featured-item'>
-              <a
-                href={item.external_urls.spotify}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <div key={item.id} className="featured-item">
+              <a href={`/featured-playlists/${item.id}`}>
                 <img src={item.images[0].url} alt={item.name} />
                 <h4>{item.name}</h4>
                 {!amount && <p>{item.description}</p>}

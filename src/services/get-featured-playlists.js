@@ -5,6 +5,7 @@ const getFeaturedPlaylists = async (setData) => {
     const { data, status } = await axios.get('/browse/featured-playlists');
     if (status === 200) {
       setData(data);
+      console.log(data);
     }
   } catch (error) {
     console.error(error);

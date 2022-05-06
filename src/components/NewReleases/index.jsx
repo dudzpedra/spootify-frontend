@@ -14,7 +14,7 @@ const NewReleases = ({ amount }) => {
       <div className="new-releases-header">
         <h1>
           {!amount && <a href="/">Home</a>}
-          {! amount && ' | '}
+          {!amount && " | "}
           <a href="/new-releases">New Releases</a>
         </h1>
         {amount && (
@@ -26,12 +26,18 @@ const NewReleases = ({ amount }) => {
       <div className="new-releases-grid">
         {data &&
           data.albums.items.slice(0, amount).map((item) => (
-            <div key={item.id} className='new-releases-item'>
-              <img src={item.images[1].url} alt="" />
-              {!amount && <p>{item.release_date}</p>}
-              <p>
-                {item.artists[0].name} - {item.name}
-              </p>
+            <div key={item.id} className="new-releases-item">
+              <a
+                href={item.external_urls.spotify}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={item.images[1].url} alt="" />
+                {!amount && <p>{item.release_date}</p>}
+                <h4>
+                  {item.artists[0].name} - {item.name}
+                </h4>
+              </a>
             </div>
           ))}
       </div>
